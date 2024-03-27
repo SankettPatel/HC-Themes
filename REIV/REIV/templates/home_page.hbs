@@ -1,0 +1,227 @@
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
+<section id="main-content" class="section hero">
+  <div class="hero-inner ">
+        <div class="welcome-message-wrapper">
+      <h1 class="welcome-message">
+      {{settings.welcome_message1}}
+      </h1>
+          <h1 class="welcome-message1">
+      {{settings.welcome_message2}}
+      </h1>
+    </div>
+    <h2 class="visibility-hidden ">{{ t 'search' }}</h2>
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    
+    {{search submit=true instant=settings.instant_search class='search search-full' placeholder="Search IT knowledgebase...."}}
+
+
+      <div class="popular-search hero-inner">
+      <p>{{'Popular Searches :'}}</p>
+        <div class="popular-search-el">
+          <div class="search-items">
+          <a href="{{settings.welcome_section_1_url}}">{{settings.welcome_section_links_1}}</a>
+          </div>
+          <div class="search-items">
+          <a href="{{settings.welcome_section_2_url}}">{{settings.welcome_section_links_2}}</a>
+          </div>
+          <div class="search-items">
+          <a href="{{settings.welcome_section_3_url}}">{{settings.welcome_section_links_3}}</a>
+          </div>
+        </div>
+    </div>
+      </div>
+</section>
+
+<div class="container">
+  <section class="knowledge-base">
+    <section class="categories blocks">
+      <ul class="blocks-list">
+          {{#if settings.show_custom_box_1}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_1_link}}" class="blocks-item-link">
+                <div class="cat-image-div">
+                    <img src="{{settings.custom_box_1_image}}" class="cat-img">
+                  </div>
+                <div class="bg-div">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_1_heading}}
+                    </span>
+                  </div>
+                {{#isnt settings.first_custom_block_description 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.first_custom_block_description}}
+                  </span>
+                {{/isnt}}
+                </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_2}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_2_link}}" class="blocks-item-link">
+                <div class="cat-image-div">
+                    <img src="{{settings.custom_box_2_image}}" class="cat-img">
+                  </div>
+                <div class="bg-div">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_2_heading}}
+                    </span>
+                  </div>
+                {{#isnt settings.second_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.second_custom_block_desc}}
+                  </span>
+                {{/isnt}}
+                </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_3}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_3_link}}" class="blocks-item-link">
+                <div class="cat-image-div">
+                    <img src="{{settings.custom_box_3_image}}" class="cat-img">
+                  </div>
+                <div class="bg-div">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_3_heading}}
+                    </span>
+                  </div>
+                {{#isnt settings.third_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.third_custom_block_desc}}
+                  </span>
+                {{/isnt}}
+                </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_4}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_4_link}}" class="blocks-item-link">
+                <div class="cat-image-div">
+                    <img src="{{settings.custom_box_4_image}}" class="cat-img">
+                  </div>
+                <div class="bg-div">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_4_heading}}
+                    </span>
+                  </div>
+                {{#isnt settings.fourth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.fourth_custom_block_desc}}
+                  </span>
+                {{/isnt}}
+                </div>
+              </a>
+            </li>
+          {{/if}}        
+      </ul>
+
+    </section>
+
+
+      {{#if promoted_articles}}
+        <section class="articles promoted-articles-block-wrapper">
+          <h2 class="promoted-article-title">{{t 'promoted_articles'}}</h2>
+          <ul class="article-list promoted-articles">
+            {{#each promoted_articles}}
+              <li class="promoted-articles-item">
+                <span class="fas fa-star" title="{{t 'promoted'}}"></span>
+                <div class="promoted-article-content">
+                  <a href="{{url}}">{{title}}</a>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </section>
+      {{/if}}
+
+  </section>
+
+
+  </section>
+</div>
+
+        <div class="mid-wrapper">
+      <h2>{{settings.mid_title}}</h2>
+      </div>
+<div class= "support-request">
+    <section class="section home-section community support-blocks">
+
+                  {{#if settings.show_custom_box_7}}
+            <li class="blocks-item1">
+              <a href="{{settings.show_custom_box_7_link}}" class="blocks-item-link1">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title1">
+                      {{settings.custom_box_7_heading}}
+                    </span>
+                  </div>
+                  <span class="blocks-item-description">
+                    {{settings.seventh_custom_block_desc}}
+                  </span>                
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_8}}
+            <li class="blocks-item1">
+              <a href="{{settings.show_custom_box_8_link}}" class="blocks-item-link1">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title1">
+                      {{settings.custom_box_8_heading}}
+                    </span>
+                  </div>
+                    <span class="blocks-item-description">
+                    {{settings.eighth_custom_block_desc}}
+                  </span>
+              </a>
+            </li>
+          {{/if}}
+                {{#if settings.show_custom_box_9}}
+            <li class="blocks-item1">
+              <a href="{{settings.show_custom_box_9_link}}" class="blocks-item-link1">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title1">
+                      {{settings.custom_box_9_heading}}
+                    </span>
+                  </div>
+                    <span class="blocks-item-description">
+                    {{settings.ninth_custom_block_desc}}
+                  </span>
+              </a>
+            </li>
+          {{/if}}
+    </section>
+</div>
+
+
+
+
+{{#if help_center.community_enabled}}
+<div class="mid-container">
+  
+    <div class="bottom-wrapper">
+  <h2 class="bottomC">{{'Can’t find what you’re looking for ?'}}</h2>
+	<h3 class="bottomC-sub">{{'Let us help you!'}}</h3>
+  </div>
+
+<div class="container submit-container">
+  <h2 class="bottom-submit submit-a-request sar">
+    <a href="{{settings.submit_request_url}}">{{settings.submit_request_title}}</a>
+    
+  </h2>
+</div>
+  
+  {{/if}}
+
+  
+</div>
+
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+
+
