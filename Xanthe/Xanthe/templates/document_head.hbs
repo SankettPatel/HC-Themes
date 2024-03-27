@@ -1,0 +1,63 @@
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+<script>
+  /**
+  * Add icon like:
+  * var assetsCAT_ID = "{{asset 'product-documents.png'}}";
+  * Replace CAT_ID with the category id
+  * for example:
+  * var assets360003515578 = "{{asset 'product-documents.png'}}";
+  **/
+</script>
+
+<script>
+
+  /**
+  * Returns URL of image
+  *
+  **/
+
+  function getAssetURLById(id) {
+    return {
+      blockIcon: window["assets" + id],
+      blockHoverIcon: window["assetsHover" + id]
+    }
+  }
+
+  /**
+  * sets the image url from assets id
+  *
+  **/
+  function setIcon(id) {
+    var icon = getAssetURLById(id);
+
+    if ( icon.blockIcon != undefined ) {
+      var blockIcon = $("."+ id + '-block-icon');
+      var blockHoverIcon = $("."+ id + '-block-hover-icon');
+      var blockFontIcon = $("."+ id + '-block-font-icon');
+
+      if ( icon.blockIcon.indexOf('fa') == 0 ) {
+        blockFontIcon.addClass(icon.blockIcon);
+        blockFontIcon.parent().removeClass('hide');
+        blockFontIcon.show();
+        blockIcon.hide();
+        blockHoverIcon.hide();
+      } else {
+        blockIcon.attr('src', icon.blockIcon);
+        blockHoverIcon.attr('src', icon.blockHoverIcon);
+        blockIcon.parent().removeClass('hide');
+        blockFontIcon.hide();
+      }
+    }
+  }
+</script>
+<!-- Start of auggies Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=20f83bb2-0f08-4abc-8efd-22932d0d8c35"> </script>
+<!-- End of auggies Zendesk Widget script -->
+<script type="text/javascript">
+  window.zESettings = {
+    launcher: {
+      offset: { horizontal: '100px', vertical: '150px' }
+    }
+  };
+</script>

@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://kit.fontawesome.com/b0e3878ddc.js" crossorigin="anonymous"></script>
+
+
+<footer class="footer">
+  <div class="back-to-top">
+  <button id="scrollToTopBtn"><i class="fa fa-angle-up" aria-hidden="true"></i>
+	</button>
+  </div>
+  {{#if settings.contact_box}}
+    <div class="contact-sec">
+      <div class="container">
+          <div class="sec-con-div">
+            <h3>
+              {{settings.contact_heading_text}}
+            </h3>
+            <div class="con-btn">
+              {{#if settings.callus_button}}
+                <a href="{{settings.callus_button_link}}" class="con-anc">
+                  {{settings.callus_button_text}}
+                </a>
+              {{/if}}
+              {{#if settings.chat_button}}
+                <a href="{{settings.chat_button_link}}" class="con-anc chat-btn">
+                  {{settings.chat_button_text}}
+                </a>
+              {{/if}}
+            </div>
+          </div>
+      </div>
+    </div>
+  {{/if}}
+  <div class="footer-inner-wrapper">
+    <div class="footer-inner">
+      <div class="footer-logo-wrapper">
+ <div class="copyright-wrapper">
+      &copy; {{#link 'help_center'}}{{help_center.name}}{{/link}}
+    </div>
+      </div>
+
+      <div class="footer-social-wrapper">
+        <div class="footer-social_links">
+  <div class="socials">
+    
+              {{#isnt settings.linkedin_url "#"}}      
+  <button class="btn1">
+        <a href="{{settings.linkedin_url}}">
+    <img src="{{asset 'Social_Icon_04.png'}}">
+        </a>
+  </button>
+  {{/isnt}}
+
+        {{#isnt settings.instagram_url "#"}}
+      <button class="btn1">
+        <a href="{{settings.instagram_url}}">
+    <img src="{{asset 'Social_Icon_05.png'}}">
+        </a>
+  </button>
+  {{/isnt}}
+    
+      {{#isnt settings.twitter_url "#"}}
+  <button class="btn1">
+        <a href="{{settings.twitter_url}}">
+    <img src="{{asset 'Social_Icon_02.png'}}">
+        </a>
+  </button>
+    {{/isnt}}
+
+      {{#isnt settings.youtube_url "#"}}
+  <button class="btn1">
+        <a href="{{settings.youtube_url}}">
+    <img src="{{asset 'Social_Icon_03.png'}}">
+        </a>
+  </button>
+      {{/isnt}}
+    
+    {{#isnt settings.facebook_url "#"}}
+      <button class="btn1">
+        <a href="{{settings.facebook_url}}">
+    <img src="{{asset 'Social_Icon_01.png'}}">
+        </a>
+  </button>
+  {{/isnt}}
+
+
+
+
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
