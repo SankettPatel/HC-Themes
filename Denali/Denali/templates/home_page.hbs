@@ -1,0 +1,172 @@
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
+<section id="main-content" class="section hero {{#is settings.hero_image_display true}} hero-image{{/is}}">
+  <div class="hero-inner">
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    {{search submit=false instant=settings.instant_search class='search search-full' placeholder="Hello, How can we help?"}}
+  </div>
+</section>
+
+<div class="sec-con container">
+      <div class="have-question-main-wrapper">
+      <section class="have-question-wrapper">
+          <h2 class="have-question-main-heading">
+            {{settings.top_header}}
+          </h2>
+      </section>  
+    </div>
+  <section class="knowledge-base">
+    <section class="categories blocks">
+      <ul class="blocks-list">
+          {{#if settings.show_custom_box_1}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_1_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_1_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_1_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_2}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_2_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_2_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_2_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_3}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_3_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_3_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_3_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_4}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_4_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_4_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_4_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_5}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_5_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_5_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_5_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_6}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_6_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_6_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_6_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+        
+      </ul>
+
+    </section>
+
+
+  </section>
+
+    <section class="section home-section activity">
+      <h2 class="recent-activity-comm">{{settings.mid_block_title}}</h2>
+      <p class="recent-activity-desc"><a href="#">{{settings.mid_block_sub}}</a></p>
+    </section>
+
+    <div class="have-question-main-wrapper">
+      <section class="have-question-wrapper">
+        <div class="have-question-content">
+          <h2 class="have-question-main-heading">
+            {{settings.bottom_title}}
+          </h2>
+          
+        </div>
+      </section>  
+    </div>
+  
+  <section class="category-blocks browse-help">
+    <ul class="blocks-list">
+              {{#if settings.show_custom_box_7}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_7_link}}" class="blocks-item-link">
+                <img src="{{settings.custom_box_7_image}}" class="cat-img">
+                <h2 class="blocks-item-title">
+                  {{settings.custom_box_7_heading}}
+                </h2>
+                 
+              </a>
+            </li>
+          {{/if}}
+              {{#if settings.show_custom_box_8}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_8_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_8_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_8_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+              {{#if settings.show_custom_box_9}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_9_link}}" class="blocks-item-link">
+                  <div class="cat-image-div">
+                    <img src="{{settings.custom_box_9_image}}" class="cat-img">
+                  </div>
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_9_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+    </ul>
+  </section>
+</div>
