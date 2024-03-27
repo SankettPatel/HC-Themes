@@ -1,0 +1,994 @@
+{
+  "name": "joe",
+  "author": "Dynanet support",
+  "version": "4.0.1",
+  "api_version": 2,
+  "default_locale": "en-us",
+  "settings": [
+    {
+      "label": "colors_group_label",
+      "variables": [
+        {
+          "identifier": "brand_color",
+          "type": "color",
+          "description": "brand_color_description",
+          "label": "brand_color_label",
+          "value": "rgba(61, 57, 55, 1)"
+        },
+        {
+          "identifier": "brand_text_color",
+          "type": "color",
+          "description": "brand_text_color_description",
+          "label": "brand_text_color_label",
+          "value": "#FFFFFF"
+        },
+        {
+          "identifier": "text_color",
+          "type": "color",
+          "description": "text_color_description",
+          "label": "text_color_label",
+          "value": "rgba(61, 57, 55, 1)"
+        },
+        {
+          "identifier": "link_color",
+          "type": "color",
+          "description": "link_color_description",
+          "label": "link_color_label",
+          "value": "rgba(61, 57, 55, 1)"
+        },
+        {
+          "identifier": "hover_link_color",
+          "type": "color",
+          "description": "hover_link_color_description",
+          "label": "hover_link_color_label",
+          "value": "#0F3554"
+        },
+        {
+          "identifier": "visited_link_color",
+          "type": "color",
+          "description": "visited_link_color_description",
+          "label": "visited_link_color_label",
+          "value": "rgba(61, 57, 55, 1)"
+        },
+        {
+          "identifier": "background_color",
+          "type": "color",
+          "description": "background_color_description",
+          "label": "background_color_label",
+          "value": "rgba(252, 252, 252, 1)"
+        }
+      ]
+    },
+    {
+      "label": "fonts_group_label",
+      "variables": [
+        {
+          "identifier": "heading_font",
+          "type": "list",
+          "description": "heading_font_description",
+          "label": "heading_font_label",
+          "value": "'Poppins', sans-serif",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Poppins",
+              "value": "'Poppins', sans-serif"
+            }
+          ]
+        },
+        {
+          "identifier": "text_font",
+          "type": "list",
+          "description": "text_font_description",
+          "label": "text_font_label",
+          "value": "'Poppins', sans-serif",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Poppins",
+              "value": "'Poppins', sans-serif"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "brand_group_label",
+      "variables": [
+        {
+          "identifier": "logo",
+          "type": "file",
+          "description": "logo_description",
+          "label": "logo_label"
+        },
+        {
+          "identifier": "show_brand_name",
+          "type": "checkbox",
+          "description": "show_brand_name_description",
+          "label": "show_brand_name_label",
+          "value": false
+        },
+        {
+          "identifier": "favicon",
+          "type": "file",
+          "description": "favicon_description",
+          "label": "favicon_label"
+        }
+      ]
+    },
+    {
+      "label": "images_group_label",
+      "variables": [
+        {
+          "identifier": "homepage_background_image",
+          "type": "file",
+          "description": "homepage_background_image_description",
+          "label": "homepage_background_image_label"
+        },
+        {
+          "identifier": "logo_mid",
+          "type": "file",
+          "description": "Add Mid Text logo",
+          "label": "Mid Text Logo"
+        },
+        {
+          "identifier": "logo_bottom",
+          "type": "file",
+          "description": "Add Bottom Text logo",
+          "label": "Bottom Text Logo"
+        },
+        {
+          "identifier": "logo_request",
+          "type": "file",
+          "description": "Add Submit a request logo",
+          "label": "Submit a request Logo"
+        }
+      ]
+    },
+    {
+      "label": "Header Element",
+      "variables": [
+        {
+          "identifier": "minimal_header",
+          "type": "checkbox",
+          "description": "Minimize header links",
+          "label": "Check to hide header links",
+          "value": false
+        },
+        {
+          "identifier": "header_link_color",
+          "type": "color",
+          "description": "change header link font color",
+          "label": "header link color",
+          "value": "rgba(55, 67, 81, 1)"
+        }
+      ]
+    },
+    {
+      "label": "search_group_label",
+      "variables": [
+        {
+          "identifier": "instant_search",
+          "type": "checkbox",
+          "description": "instant_search_description",
+          "label": "instant_search_label",
+          "value": true
+        },
+        {
+          "identifier": "scoped_kb_search",
+          "type": "checkbox",
+          "description": "scoped_knowledge_base_search_description",
+          "label": "scoped_knowledge_base_search_label",
+          "value": true
+        },
+        {
+          "identifier": "scoped_community_search",
+          "type": "checkbox",
+          "description": "scoped_community_search_description",
+          "label": "scoped_community_search_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "Popular Search Link 1",
+      "variables": [
+        {
+          "identifier": "welcome_section_links_1",
+          "type": "text",
+          "description": "Add link title here",
+          "label": "Popular search link title",
+          "value": "Invoices"
+        },
+        {
+          "identifier": "welcome_section_1_url",
+          "type": "text",
+          "description": "Add link here",
+          "label": "Popular search link",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Popular Search Link 2",
+      "variables": [
+        {
+          "identifier": "welcome_section_links_2",
+          "type": "text",
+          "description": "Add link title here",
+          "label": "Popular search link title",
+          "value": "Payments"
+        },
+        {
+          "identifier": "welcome_section_2_url",
+          "type": "text",
+          "description": "Add link here",
+          "label": "Popular search link",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Popular Search Link 3",
+      "variables": [
+        {
+          "identifier": "welcome_section_links_3",
+          "type": "text",
+          "description": "Add link title here",
+          "label": "Popular search link title",
+          "value": "Returns"
+        },
+        {
+          "identifier": "welcome_section_3_url",
+          "type": "text",
+          "description": "Add link here",
+          "label": "Popular search link",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "1st Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_1",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "1st Custom Block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_1_heading",
+          "type": "text",
+          "description": "Enter custom block title here",
+          "label": "Add Title",
+          "value": "Research"
+        },
+        {
+          "identifier": "first_custom_block_description",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Description",
+          "value": "Quality research services to local and international clients."
+        },
+        {
+          "identifier": "show_custom_box_1_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        },
+        {
+          "identifier": "custom_box_1_image",
+          "type": "file",
+          "description": "Add image to the custom block",
+          "label": "Custom block Image"
+        }
+      ]
+    },
+    {
+      "label": "2nd Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_2",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "2nd Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_2_heading",
+          "type": "text",
+          "description": "Enter custom block title here",
+          "label": "Add Title",
+          "value": "Courses"
+        },
+        {
+          "identifier": "second_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Description",
+          "value": "Join our educational courses to discover more."
+        },
+        {
+          "identifier": "show_custom_box_2_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        },
+        {
+          "identifier": "custom_box_2_image",
+          "type": "file",
+          "description": "Add image to the custom block",
+          "label": "Custom block Image"
+        }
+      ]
+    },
+    {
+      "label": "3rd Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_3",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "3rd Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_3_heading",
+          "type": "text",
+          "description": "Enter custom block title here",
+          "label": "Add Title",
+          "value": "Classes"
+        },
+        {
+          "identifier": "third_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Description",
+          "value": "A variety of activities for children of any age."
+        },
+        {
+          "identifier": "show_custom_box_3_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        },
+        {
+          "identifier": "custom_box_3_image",
+          "type": "file",
+          "description": "Add image to the custom block",
+          "label": "Custom block Image"
+        }
+      ]
+    },
+    {
+      "label": "4th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_4",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "4th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_4_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "Services"
+        },
+        {
+          "identifier": "fourth_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Description",
+          "value": "Variety of online and offline informational services."
+        },
+        {
+          "identifier": "show_custom_box_4_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        },
+        {
+          "identifier": "custom_box_4_image",
+          "type": "file",
+          "description": "Add image to the custom block",
+          "label": "Custom block Image"
+        }
+      ]
+    },
+    {
+      "label": "5th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_5",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "5th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_5_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "Rental"
+        },
+        {
+          "identifier": "fifth_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Description",
+          "value": "Allows you to rent the equipment for your own research."
+        },
+        {
+          "identifier": "show_custom_box_5_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        },
+        {
+          "identifier": "custom_box_5_image",
+          "type": "file",
+          "description": "Add image to the custom block",
+          "label": "Custom block Image"
+        }
+      ]
+    },
+    {
+      "label": "6th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_6",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "6th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_6_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "Demo"
+        },
+        {
+          "identifier": "sixth_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Description",
+          "value": "Provides a wide set of services for every visitor."
+        },
+        {
+          "identifier": "show_custom_box_6_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        },
+        {
+          "identifier": "custom_box_6_image",
+          "type": "file",
+          "description": "Add image to the custom block",
+          "label": "Custom block Image"
+        }
+      ]
+    },
+    {
+      "label": "Mid Section",
+      "variables": [
+        {
+          "identifier": "mid_title",
+          "type": "text",
+          "description": "Add Mid section heading here",
+          "label": "Mid Heading",
+          "value": "Articles by topic"
+        }
+      ]
+    },
+    {
+      "label": "7th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_7",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "7th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_7_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "Gallery"
+        },
+        {
+          "identifier": "seventh_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Description",
+          "value": "Getting started with us"
+        },
+        {
+          "identifier": "show_custom_box_7_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "8th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_8",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "8th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_8_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "News"
+        },
+        {
+          "identifier": "eighth_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Descripton",
+          "value": "Brainstorm in Freehand"
+        },
+        {
+          "identifier": "show_custom_box_8_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "9th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_9",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "8th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_9_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "Blog"
+        },
+        {
+          "identifier": "ninth_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Descripton",
+          "value": "Brainstorm in Freehand"
+        },
+        {
+          "identifier": "show_custom_box_9_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "10th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_10",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "8th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_10_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "Blog"
+        },
+        {
+          "identifier": "tenth_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Descripton",
+          "value": "Brainstorm in Freehand"
+        },
+        {
+          "identifier": "show_custom_box_10_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "11th Custom block",
+      "variables": [
+        {
+          "identifier": "show_custom_box_11",
+          "type": "checkbox",
+          "description": "Checkbox to Show/Hide Custom block",
+          "label": "8th Custom block Visibility",
+          "value": true
+        },
+        {
+          "identifier": "custom_box_11_heading",
+          "type": "text",
+          "description": "Enter heading here",
+          "label": "Add Title",
+          "value": "Blog"
+        },
+        {
+          "identifier": "eleven_custom_block_desc",
+          "type": "text",
+          "description": "Description of the custom block",
+          "label": "Add Descripton",
+          "value": "Brainstorm in Freehand"
+        },
+        {
+          "identifier": "show_custom_box_11_link",
+          "type": "text",
+          "description": "Enter url here",
+          "label": "Add URL",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Submit a request Block",
+      "variables": [
+        {
+          "identifier": "submit_request_title",
+          "type": "text",
+          "description": "Submit a request title text",
+          "label": "Add Title here",
+          "value": "Submit a request"
+        },
+        {
+          "identifier": "submit_request_url",
+          "type": "text",
+          "description": "Submit a request block link",
+          "label": "Add link here",
+          "value": "/hc/en-us/requests/new"
+        }
+      ]
+    },
+    {
+      "label": "article_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_articles_in_section",
+          "type": "checkbox",
+          "description": "articles_in_section_description",
+          "label": "articles_in_section_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_author",
+          "type": "checkbox",
+          "description": "article_author_description",
+          "label": "article_author_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_comments",
+          "type": "checkbox",
+          "description": "article_comments_description",
+          "label": "article_comments_label",
+          "value": true
+        },
+        {
+          "identifier": "show_follow_article",
+          "type": "checkbox",
+          "description": "follow_article_description",
+          "label": "follow_article_label",
+          "value": true
+        },
+        {
+          "identifier": "show_recently_viewed_articles",
+          "type": "checkbox",
+          "description": "recently_viewed_articles_description",
+          "label": "recently_viewed_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_related_articles",
+          "type": "checkbox",
+          "description": "related_articles_description",
+          "label": "related_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_sharing",
+          "type": "checkbox",
+          "description": "article_sharing_description",
+          "label": "article_sharing_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "section_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_section",
+          "type": "checkbox",
+          "description": "follow_section_description",
+          "label": "follow_section_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "community_post_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_post",
+          "type": "checkbox",
+          "description": "follow_post_description",
+          "label": "follow_post_label",
+          "value": true
+        },
+        {
+          "identifier": "show_post_sharing",
+          "type": "checkbox",
+          "description": "post_sharing_description",
+          "label": "post_sharing_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "community_topic_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_topic",
+          "type": "checkbox",
+          "description": "follow_topic_description",
+          "label": "follow_topic_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "request_list_group_label",
+      "variables": [
+        {
+          "identifier": "request_list_beta",
+          "type": "checkbox",
+          "description": "request_list_beta_description",
+          "label": "request_list_beta_label",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "Footer Section",
+      "variables": [
+        {
+          "identifier": "footer_bg_color",
+          "type": "color",
+          "description": "Add footer background color",
+          "label": "Add color here",
+          "value": "#ffffff"
+        },
+        {
+          "identifier": "footer_link_color",
+          "type": "color",
+          "description": "Add footer link color",
+          "label": "Add color here",
+          "value": "#736b67"
+        }
+      ]
+    },
+    {
+      "label": "Social Links",
+      "variables": [
+        {
+          "identifier": "twitter_url",
+          "type": "text",
+          "description": "Enter Twitter Link",
+          "label": "Twitter",
+          "value": "#!"
+        },
+        {
+          "identifier": "facebook_url",
+          "type": "text",
+          "description": "Enter Facebook Link",
+          "label": "Facebook",
+          "value": "#!"
+        },
+        {
+          "identifier": "instagram_url",
+          "type": "text",
+          "description": "Enter Instagram Link",
+          "label": "Instagram",
+          "value": "#!"
+        },
+        {
+          "identifier": "linkedin_url",
+          "type": "text",
+          "description": "Enter LinkedIn Link",
+          "label": "LinkedIn",
+          "value": "#!"
+        },
+        {
+          "identifier": "youtube_url",
+          "type": "text",
+          "description": "Enter Youtube Link",
+          "label": "YouTube",
+          "value": "#!"
+        }
+      ]
+    },
+    {
+      "label": "Back to website Block",
+      "variables": [
+        {
+          "identifier": "back_to_website_title",
+          "type": "text",
+          "description": "back to website title text",
+          "label": "Add Title here",
+          "value": "Back to website"
+        },
+        {
+          "identifier": "back_to_website_url",
+          "type": "text",
+          "description": "back to website link",
+          "label": "Add link here",
+          "value": "#"
+        }
+      ]
+    }
+  ]
+}

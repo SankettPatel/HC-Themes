@@ -1,0 +1,80 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/39f20aadc9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+
+<footer class="footer">
+  <div class="footer-inner">
+   <div class="back-to-homepage">
+     <a href="{{settings.back_to_website_url}}">{{settings.back_to_website_title}}</a>
+    </div>
+  <div class="container socials">
+          {{#isnt settings.linkedin_url "#"}}      
+  <button class="btn1">
+        <a href="{{settings.linkedin_url}}">
+    <img src="{{asset 'Social_Icon_04.png'}}">
+        </a>
+  </button>
+  {{/isnt}}
+
+        {{#isnt settings.instagram_url "#"}}
+      <button class="btn1">
+        <a href="{{settings.instagram_url}}">
+    <img src="{{asset 'Social_Icon_05.png'}}">
+        </a>
+  </button>
+  {{/isnt}}
+    
+          {{#isnt settings.twitter_url "#"}}
+  <button class="btn1">
+        <a href="{{settings.twitter_url}}">
+    <img src="{{asset 'Social_Icon_02.png'}}">
+        </a>
+  </button>
+    {{/isnt}}
+
+      {{#isnt settings.youtube_url "#"}}
+  <button class="btn1">
+        <a href="{{settings.youtube_url}}">
+    <img src="{{asset 'Social_Icon_03.png'}}">
+        </a>
+  </button>
+      {{/isnt}}
+    
+    {{#isnt settings.facebook_url "#"}}
+      <button class="btn1">
+        <a href="{{settings.facebook_url}}">
+    <img src="{{asset 'Social_Icon_01.png'}}">
+        </a>
+  </button>
+  {{/isnt}}
+
+
+  </div>
+    
+        <div class="footer-language-selector">
+      {{#if alternative_locales}}
+        <div class="dropdown language-selector">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_locale.name}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu dropdown-menu-end" role="menu">
+            {{#each alternative_locales}}
+              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </div>
+      {{/if}}
+    </div>
+    
+    <div class="footer-brand">
+     {{#link 'help_center'}}{{help_center.name}}{{/link}}
+    </div>
+  </div>
+</footer>
