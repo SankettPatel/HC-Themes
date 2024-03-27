@@ -1,0 +1,32 @@
+<section id="main-content" class="section hero">
+  <div class="hero-inner">
+    <div class="welcome-message-wrapper">
+      <h1 class="welcome-message">
+      {{settings.welcome_message}}
+      </h1>
+      <h1 class="welcome-message1">
+      {{settings.welcome_message1}}
+      </h1>              
+    </div>
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    {{search submit=false instant=settings.instant_search class='search search-full' placeholder="Search the documentation"}}
+  </div>
+</section>
+
+<div class="container-divider"></div>
+<div class="container">
+  <nav class="sub-nav">
+    {{breadcrumbs}}
+  </nav>
+
+  <h1>
+    {{t 'submit_a_request'}}
+    <span class="follow-up-hint">
+      {{follow_up}}
+    </span>
+  </h1>
+
+  <div id="main-content" class="form">
+    {{request_form wysiwyg=true}}
+  </div>
+</div>

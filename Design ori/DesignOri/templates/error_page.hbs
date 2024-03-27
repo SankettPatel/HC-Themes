@@ -1,0 +1,36 @@
+<section id="main-content" class="section hero">
+  <div class="hero-inner">
+    <div class="welcome-message-wrapper">
+      <h1 class="welcome-message">
+      {{settings.welcome_message}}
+      </h1>
+      <h1 class="welcome-message1">
+      {{settings.welcome_message1}}
+      </h1>              
+    </div>
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    {{search submit=false instant=settings.instant_search class='search search-full' placeholder="Search the documentation"}}
+  </div>
+</section>
+
+<div class="container-divider"></div>
+<div id="main-content" class="error-page">
+  <h1>{{t 'oops'}}</h1>
+
+  {{#is error 'unauthorized'}}
+    <h2>{{link 'sign_in'}}</h2>
+  {{/is}}
+
+  {{#is error 'forbidden'}}
+    <h2>{{t 'not_authorized'}}</h2>
+  {{/is}}
+
+  {{#is error 'not_found'}}
+    <h2>{{t 'nonexistent_page'}}</h2>
+    <p>{{t 'mistyped_address_or_moved_page'}}</p>
+  {{/is}}
+
+  {{#link 'help_center'}}
+            <div class="section-subscribe home-page">{{'Take me back to homepage'}}</div>
+  {{/link}}
+</div>

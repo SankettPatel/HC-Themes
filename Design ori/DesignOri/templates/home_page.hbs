@@ -1,0 +1,228 @@
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
+<section id="main-content" class="section hero">
+  <div class="hero-inner">
+    <div class="welcome-message-wrapper">
+      <h1 class="welcome-message">
+      {{settings.welcome_message}}
+      </h1>
+      <h1 class="welcome-message1">
+      {{settings.welcome_message1}}
+      </h1>              
+    </div>
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    {{search submit=false instant=settings.instant_search class='search search-full' placeholder="Search the documentation"}}
+  </div>
+</section>
+
+<div class="container">
+<!-- Submit ticket  -->
+<div class="ticket-box">
+            {{#if settings.show_custom_box_0}}
+            <li class="blocks-item0">
+              <a href="{{settings.show_custom_box_0_link}}" class="blocks-item-link0">
+
+                  <div class="cat-img-text-div0">
+                    <span class="blocks-item-title0">
+                      {{settings.custom_box_0_heading}}
+                    </span>
+                  </div>
+              </a>
+            </li>
+          {{/if}}
+  </div>
+
+<!-- Knowledge base   -->
+          <div class="middle-text knowledge-base">
+            <div class="knowledge-base-title">
+              <h1 class="mid-heading">{{settings.top_header}}</h1>
+              <h3 class="mid-sub">{{settings.top_sub}} </h3>
+            </div>
+            <h2 href="#accordion-title" id="kb_btn" class="top-text">{{settings.top_accordion}}<span class="drop-icon"><i class='bx bx-chevron-down'></i></span></h2>
+          </div>  
+          
+</div> 
+        						{{#unless signed_in}}
+						<div class="sign-text" >
+            <h3 class="container sign-sub">{{settings.sign_desc}}  
+            {{#link "sign_in" class="sign-in sign-bg"}}
+              {{t 'sign_in'}}
+            {{/link}}
+              </h3> 
+          </div>
+					{{/unless}}
+
+  
+<!-- knowledge base blocks -->
+<div class="container">  
+  <section class="section knowledge-base">
+    <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
+    <section class="categories blocks">
+
+<div class="accordion">  
+  <span class="accordion-title_kb accordion-active"></span>
+      <ul class="blocks-list accordion-content">
+          {{#if settings.show_custom_box_1}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_1_link}}" class="blocks-item-link">
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_1_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.first_custom_block_description 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.first_custom_block_description}}
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_2}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_2_link}}" class="blocks-item-link">
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_2_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.second_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.second_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_3}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_3_link}}" class="blocks-item-link">
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_3_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.third_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.third_custom_block_desc}}
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_4}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_4_link}}" class="blocks-item-link">
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_4_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.fourth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.fourth_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_5}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_5_link}}" class="blocks-item-link">
+                {{/if}}
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_5_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.fifth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.fifth_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{!-- {{/if}} --}}
+          {{#if settings.show_custom_box_6}}
+            <li class="blocks-item">
+              <a href="{{settings.show_custom_box_6_link}}" class="blocks-item-link">
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_6_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.sixth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.sixth_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{/if}}
+        </ul>
+    </section>
+  </section>
+
+  
+<!-- bottom text -->
+            <div class="middle-text knowledge-base bottom-head">
+              <div class="knowledge-base-title">
+                <h1 class="mid-head">{{settings.bottom_header}}</h1>
+                <h3 class="mid-sub">{{settings.bottom_sub}}</h3>
+              </div>
+              <h2 id="kb_btn_2" class="accordion-title accordion-active">{{settings.bottom_accordion}}<span class="drop-icon"><i class='bx bx-chevron-down'></i></span></h2>
+          </div>  
+
+<!--   bottom blocks -->
+      <span class="accordion-title_kb_2 accordion-active"></span>
+            {{#if settings.show_custom_box_7}}
+            <li class="blocks-item1 accordion-content">
+              <a href="{{settings.show_custom_box_7_link}}" class="blocks-item-link1">
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_7_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.seventh_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.seventh_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.show_custom_box_8}}
+            <li class="blocks-item1 accordion-content">
+              <a href="{{settings.show_custom_box_8_link}}" class="blocks-item-link1">
+
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_8_heading}}
+                    </span>
+                  </div>
+
+                {{#isnt settings.eighth_custom_block_desc 'HIDE_ME'}}
+                  <span class="blocks-item-description">
+                    {{settings.eighth_custom_block_desc}} 
+                  </span>
+                {{/isnt}}
+              </a>
+            </li>
+          {{/if}}
+  </div>
+
+</div>

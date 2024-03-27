@@ -1,0 +1,100 @@
+<script type="text/javascript">window.searchClearButtonLabelLocalized = "{{t 'search_clear'}}";</script>
+<script src="https://kit.fontawesome.com/39f20aadc9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+<footer class="footer">
+  <div class="footer-inner">
+      <div class="footer-language-wrapper">
+        <div class="footer-language-selector">
+          {{#if alternative_locales}}
+            <div class="dropdown language-selector">
+              <button class="dropdown-toggle" aria-haspopup="true">
+                {{current_locale.name}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+                </svg>
+              </button>
+              <span class="dropdown-menu dropdown-menu-end" role="menu">
+                {{#each alternative_locales}}
+                  <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                    {{name}}
+                  </a>
+                {{/each}}
+              </span>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    
+<!--     social icons -->
+    
+    <div class="containerS">
+      {{#isnt settings.facebook_url "#"}}
+  <button class="btn1">
+    <a href="{{settings.facebook_url}}">
+    <img src="{{asset 'Social_Icon_01.png'}}">
+    </a>
+  </button>
+      {{/isnt}}
+      {{#isnt settings.twitter_url "#"}}
+  <button class="btn1">
+     <a href="{{settings.twitter_url}}">
+    <img src="{{asset 'Social_Icon_02.png'}}">
+    </a>
+  </button>
+      {{/isnt}}
+      {{#isnt settings.linkedin_url "#"}}
+  <button class="btn1">
+    <a href="{{settings.linkedin_url}}">
+    <img src="{{asset 'Social_Icon_03.png'}}">
+    </a>
+  </button>
+      {{/isnt}}
+      {{#isnt settings.instagram_url "#"}}
+  <button class="btn1">
+    <a href="{{settings.instagram_url}}">
+    <img src="{{asset 'Social_Icon_04.png'}}">
+    </a>
+  </button>
+      {{/isnt}}
+    </div>
+  </div>
+  
+<div class="footer-links">
+          {{#is settings.minimal_footer false}}
+      <div>
+        {{#is settings.footer_title_1 true}}
+          <a href="{{settings.footer_link_1}}">{{settings.footer_title_text_1}}</a>
+        {{/is}}
+      </div>
+      <div>
+        {{#is settings.footer_title_2 true}}
+         <a href="{{settings.footer_link_2}}">{{settings.footer_title_text_2}}</a>
+        {{/is}}
+      </div>
+      <div>
+        {{#is settings.footer_title_3 true}}
+           <a href="{{settings.footer_link_3}}">{{settings.footer_title_text_3}}</a>
+        {{/is}}
+      </div>
+      <div>
+        {{#is settings.footer_title_4 true}}
+           <a href="{{settings.footer_link_4}}">{{settings.footer_title_text_4}}</a>
+        {{/is}}
+      </div>
+      <div>
+        {{#is settings.footer_title_5 true}}
+           <a href="{{settings.footer_link_5}}">{{settings.footer_title_text_5}}</a>
+        {{/is}}
+      </div>
+      {{/is}}
+</div>
+  
+  <div class="footer-outer">
+        <div class=footer-brand>
+  <h5 id="curr_year" class="footer-year"></h5>
+  <h5 class="footer-year">{{'-dynanetthemes.com. All rights reserved.'}}</h5>
+    </div>
+  </div>
+</footer>
