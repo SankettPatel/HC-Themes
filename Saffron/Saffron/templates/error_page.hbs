@@ -1,0 +1,32 @@
+<section id="main-content" class="section hero {{#is settings.hero_image_display true}} hero-image{{/is}} full-hero">
+  <div class="hero-inner">
+    <div class="welcome-message-wrapper">
+      <h1 class="welcome-message">
+        {{settings.welcome_message}}
+      </h1>
+    </div>
+
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    {{search  instant=settings.instant_search class='search search-full' placeholder="Type your question here.."}}
+  </div>
+</section>
+<div id="main-content" class="error-page">
+  <h1>{{t 'oops'}}</h1>
+
+  {{#is error 'unauthorized'}}
+    <h2>{{link 'sign_in'}}</h2>
+  {{/is}}
+
+  {{#is error 'forbidden'}}
+    <h2>{{t 'not_authorized'}}</h2>
+  {{/is}}
+
+  {{#is error 'not_found'}}
+    <h2>{{t 'nonexistent_page'}}</h2>
+    <p>{{t 'mistyped_address_or_moved_page'}}</p>
+  {{/is}}
+
+  {{#link 'help_center'}}
+    {{t 'back_to_homepage'}}
+  {{/link}}
+</div>

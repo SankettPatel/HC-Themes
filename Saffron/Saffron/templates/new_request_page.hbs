@@ -1,0 +1,101 @@
+<section class="sar">
+<section id="main-content" class="section hero {{#is settings.hero_image_display true}} hero-image{{/is}} full-hero">
+  <div class="hero-inner">
+    <div class="welcome-message-wrapper">
+      <h1 class="welcome-message">
+        {{settings.welcome_message}}
+      </h1>
+    </div>
+
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    {{search  instant=settings.instant_search class='search search-full' placeholder="Type your question here.."}}
+  </div>
+</section>
+
+<div class="container">
+  <nav class="sub-nav">
+    {{breadcrumbs}}
+  </nav>
+    <h1 class="sar-title">{{t 'submit_a_request'}}</h1>
+    <div class="box box_top">
+      <form id="new_request" class="request-form" data-form="" data-form-type="request" action="/hc/en-us/requests" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+  <input type="hidden" name="request[ticket_form_id]" id="request_ticket_form_id" value="162185" autocomplete="off" />
+
+  <div class="form-field string required request_anonymous_requester_email"><label for="request_anonymous_requester_email">{{'Your email address*'}}</label>
+<input type="text" name="request[anonymous_requester_email]" id="request_anonymous_requester_email" aria-required="true" />
+</div>
+
+  
+
+  
+    <div class="form-field string  required  request_subject" >
+      <label id="request_subject_label" for="request_subject">{{'Subject'}}</label>
+      <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150" aria-required="true" aria-labelledby="request_subject_label" />
+      
+      
+    </div>
+
+    
+      <div class="suggestion-list" data-hc-class="searchbox" data-hc-suggestion-list="true"></div>
+    
+  
+    <div class="form-field text  required  request_description" >
+      <label id="request_description_label" for="request_description">{{'Your message'}}</label>
+      <textarea name="request[description]" id="request_description" aria-required="true" aria-labelledby="request_description_label" data-helper="wysiwyg"></textarea><input type="hidden" name="request[description_mimetype]" id="request_description_mimetype" value="text/html" style="display: none;" autocomplete="off" />
+      
+      
+    </div>
+
+    
+  
+
+  <script data-conditional-fields="[]"></script>
+
+  <div class="form-field">
+  <label for="request-attachments">
+    {{'Attachments'}}<span class="optional">{{'(optional)'}}</span>
+  </label>
+  <div id="upload-dropzone" class="upload-dropzone">
+  <input type="file" multiple="true" id="request-attachments"
+    data-fileupload="true"
+    data-dropzone="upload-dropzone"
+    data-error="upload-error"
+    data-create-url="/hc/en-us/request_uploads"
+    data-name="request[attachments][]"
+    data-pool="request-attachments-pool"
+    data-delete-confirm-msg=""
+    aria-describedby="upload-error" />
+  <span class="atc-box">
+    <a>{{'Add file'}}</a> {{'or drop files here'}}
+  </span>
+</div>
+    <input type="submit" name="commit" value="Submit" class="new-req">
+    
+
+<div id="upload-error" class="notification notification-error notification-inline">
+  <span data-upload-error-message></span>
+</div>
+<ul id="request-attachments-pool" class="upload-pool" data-template="upload-template"></ul>
+
+<!-- Upload Template  -->
+<script type="text/html" id="upload-template">
+<li class="upload-item" data-upload-item>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="upload-item-icon">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" d="M2.5 4v4.5c0 1.7 1.3 3 3 3s3-1.3 3-3v-6c0-1.1-.9-2-2-2s-2 .9-2 2v6c0 .6.4 1 1 1s1-.4 1-1V4"/>
+    </svg>
+    <div aria-hidden="true" class="upload-item-icon-spacer"></div>
+  <a class="upload-link" target="_blank" data-upload-link></a>
+  <p class="upload-path" data-upload-path></p>
+  <p class="upload-path" data-upload-size></p>
+  <p data-upload-issue class="notification notification-alert notification-inline" aria-hidden="true"></p>
+  <span class="upload-remove" aria-label="Remove attachment" role="button" tabindex="0" data-upload-remove>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="upload-item-icon">
+      <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
+    </svg>
+  </span>
+  <div class="upload-progress" data-upload-progress></div>
+  <input type="hidden">
+</li>
+</script>
+</div>
+        </section>
