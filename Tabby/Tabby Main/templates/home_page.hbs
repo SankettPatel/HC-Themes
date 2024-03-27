@@ -1,0 +1,285 @@
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
+<section id="main-content" class="section hero">
+  <div class="hero-inner ">
+        <div class="welcome-message-wrapper">
+      <h1 class="welcome-message">
+      {{settings.welcome_message}}
+      </h1>              
+    </div>
+    <h2 class="visibility-hidden ">{{ t 'search' }}</h2>
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    {{search submit=false instant=settings.instant_search class='search search-full search-shadow' placeholder="Search for an article"}}
+  </div>
+</section>
+
+<div class="container mob-cont">
+ <section class="knowledge-base">
+    <section class="categories blocks">
+      <ul class="blocks-list">
+  
+    {{#if settings.show_custom_box_1}}
+      <div class="dropdownN blocks-c">
+        <button class="dropdown-toggle mobile-toggle" aria-haspopup="true">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_1_heading}}
+                      <i id="dropdown-arrow" class='bx bxs-chevron-down arrow long-arrow-right'></i>
+                    </span>
+                    <span class="description">
+                    {{settings.first_custom_block_description}}
+                    </span>
+                  </div>
+          
+        </button>
+        <div class="dropdown-menu mobile-menu" role="menu">
+<!-- Options -->
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019126498-How-does-Tabby-work-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'How does Tabby work?'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019125478-What-is-Tabby-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'What is Tabby'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019011557-Are-there-any-fees-on-using-Tabby-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Are there any fees on using Tabby?'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019013337-Does-Tabby-protect-my-personal-information-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Does Tabby protect my personal information?'}}
+                  </span>
+              </a>
+            	</li>
+        </div>
+      </div>
+      {{/if}}
+      {{#if settings.show_custom_box_2}}
+      <div class="dropdownN blocks-c">
+        <button class="dropdown-toggle mobile-toggle" aria-haspopup="true">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_2_heading}}
+                      <i class='bx bxs-chevron-down arrow long-arrow-right'></i>
+                    </span>
+                    <span class="description">
+                    {{settings.second_custom_block_desc}}
+                    </span>
+                  </div>
+        </button>
+        <div class="dropdown-menu" role="menu">
+<!-- Options -->
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/9727579029521-Tabby-card" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Tabby card'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/8312229839761-Tabby-Tab" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Tabby Tab'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/360005486758-How-Tabby-works" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'How Tabby works'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/5447257058065-Credit-Card-Instalments" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Credit Card Instalments'}}
+                  </span>
+              </a>
+            	</li>
+        </div>
+      </div>
+      {{/if}}
+      {{#if settings.show_custom_box_3}}
+      <div class="dropdownN blocks-c">
+        <button class="dropdown-toggle mobile-toggle" aria-haspopup="true">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_3_heading}}
+                      <i class='bx bxs-chevron-down arrow long-arrow-right'></i>
+                    </span>
+                    <span class="description">
+                    {{settings.third_custom_block_desc}}
+                    </span>
+                  </div>
+        </button>
+        <div class="dropdown-menu" role="menu">
+<!-- Options -->
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019012317-How-do-I-make-a-payment-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'How do I make a payment?'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019142698-Will-I-be-auto-charged-when-my-payment-is-due-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Will I be auto-charged when my payment is due?'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019012117-Are-there-any-Collection-Charges-What-happens-when-I-miss-a-payment-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Are there any Collection Charges ? What happens when I miss a payment?'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/4404662074257-I-received-an-error-when-trying-to-make-a-payment-What-should-I-do-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'I received an error when trying to make a payment. What should I do?'}}
+                  </span>
+              </a>
+            	</li>
+        </div>
+      </div>
+      {{/if}}
+      {{#if settings.show_custom_box_4}}
+      <div class="dropdownN blocks-c">
+        <button class="dropdown-toggle mobile-toggle " aria-haspopup="true">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_4_heading}}
+                      <i class='bx bxs-chevron-down arrow long-arrow-right'></i>
+                    </span>
+                    <span class="description">
+                    {{settings.fourth_custom_block_desc}}
+                    </span>
+                  </div>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/8029517440145-Cancellations" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Cancellations'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/360005395997-Refunds" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Refunds'}}
+                  </span>
+              </a>
+            	</li>
+        </div>
+      </div>
+      {{/if}}
+      {{#if settings.show_custom_box_5}}
+      <div class="dropdownN blocks-c">
+        <button class="dropdown-toggle mobile-toggle" aria-haspopup="true">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_5_heading}}
+                      <i class='bx bxs-chevron-down arrow long-arrow-right'></i>
+                    </span>
+                    <span class="description">
+                    {{settings.fifth_custom_block_desc}}
+                    </span>
+                  </div>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/8266220927761-Cashback-withdrawal" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Cashback withdrawal'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/sections/8265196673937-How-it-works" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'How it works'}}
+                  </span>
+              </a>
+            	</li>
+        </div>
+      </div>
+      {{/if}}
+      {{#if settings.show_custom_box_6}}
+      <div class="dropdownN blocks-c">
+        <button class="dropdown-toggle mobile-toggle" aria-haspopup="true">
+                  <div class="cat-img-text-div">
+                    <span class="blocks-item-title">
+                      {{settings.custom_box_6_heading}}
+                      <i class='bx bxs-chevron-down arrow long-arrow-right'></i>
+                    </span>
+                    <span class="description">
+                    {{settings.sixth_custom_block_desc}}
+                    </span>
+                  </div>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/4404656165265-Why-was-my-purchase-not-approved-by-Tabby-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Why was my purchase not approved by Tabby?'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/4404662115857-What-s-my-credit-limit-and-how-much-can-I-spend-with-Tabby-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'What is my credit limit and how much can I spend with Tabby?'}}
+                  </span>
+              </a>
+            	</li>
+          <li class="blocks-item">
+              <a href="https://helpcenter.tabby.ai/hc/en-us/articles/360019012197-Why-my-balance-is-locked-" class="blocks-item-link">
+                  <span class="blocks-item-description" role="menuitem">
+                    {{'Why my balance is locked?'}}
+                  </span>
+              </a>
+            	</li>
+        </div>
+      </div>
+      {{/if}}
+      </ul>
+    </section>
+  </section>  
+</div>
+
+  <!-- Download app block -->
+    <div class="mid-block">
+      <div class="mid-image">
+        <img src="{{settings.mid_image}}">
+      </div>
+      <div class="mid-content">
+        <h1>{{settings.block_content_title}}</h1>
+        <p class= "bottom-desc">{{settings.block_content_description}}</p>
+        <button class="comm-btn"><a href="{{settings.button_link}}">{{'Download the app'}}</a></button>
+      </div>
+    </div>
+
+<!-- Ask Community -->
+  <div class="ask-community container">
+    <div class="comm-text-block">
+    <h1 class="comm-title">{{settings.contact_us_header}}</h1>
+    <p class= "bottom-desc">{{settings.contact_us_content}}</p>
+    </div>
+    <div class="button-block">
+    <button class="comm-btn"><a href="{{settings.contact_us_link}}">{{settings.contact_us_link_text}}</a></button>
+  </div>
